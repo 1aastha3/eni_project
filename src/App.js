@@ -110,7 +110,17 @@ function App() {
                 <TextField
                   variant="standard"
                   inputProps={{ min: 0, style: { textAlign: 'center' } }}
-                  onChange={(e) => setThreshhold(e.target.value)}
+                  onChange={async (e) => {
+                    // try {
+                    //   axios.post(`${baseURL}/api/set-threshhold`, { threshhold }).then(result => {
+                    //     console.log(result);
+                    //   })
+                    // } catch (error) {
+                    //   console.log(error);
+                    // }
+                    setThreshhold(e.target.value)
+                  }
+                  }
                 ></TextField>
                 </div>
             </CardContent>
